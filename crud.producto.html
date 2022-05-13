@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crud promociones</title>
+  <link rel="icon" type="png" href="Imagenes/logo encabezado.png">
+  <link rel="stylesheet" href="estilo.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <div id="header1">
+    <div id="logo">
+      <img src="Imagenes/logo pequeño.png" alt="logop" style="margin: 0 0 0 0; width: 35%;">
+    </div>
+    <!-- <div id="logh" hidden><img src="Imagenes/logo.png" alt=""> </div> -->
+    <div id="logh"><img src="Imagenes/logo.png" alt="logo" style="width: 35%"></div>
+
+    <div id="menu">
+
+      <div id="Suscripción">
+        <button type="submit" class="btn btn-btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdropv">
+          <a href="index.html">Inicio</a>
+        </button>
+      </div>
+
+      <div id="Suscripción">
+        <button type="submit" class="btn btn-btn-light">
+          <a href="suscripciones.html">Suscripción</a>
+        </button>
+      </div>
+
+
+
+
+      <div id="vercom">
+        <button type="submit" class="btn btn-btn-light">
+          <a href="productos.html">Producto</a>
+        </button>
+      </div>
+
+      <div id="iniciar">
+        <!-- Button trigger modal -->
+        <button type="submit" class="btn btn-btn-light" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                <a href="#">Iniciar Sesión</a>
+            </button>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Inicio de sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <main>
+                        <form action="" class="form1" id="form1"> 
+                    
+                          <div class="form1__grupo" id="grupo__mail">
+                            <label for="mail" class="form1__label">Correo Electrónico</label>
+                            <div class="form1__grupo-input">
+                              <input type="email" class="form1__input" name="mail" id="mail" placeholder="correo@correo.com">
+                              <i class="form1__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="form1__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                          </div>
+                    
+                          <div class="form1__grupo" id="grupo__contraseña">
+                            <label for="contraseña" class="form1__label">Contraseña</label>
+                            <div class="form1__grupo-input">
+                              <input type="password" class="form1__input" name="contraseña" id="contraseña" placeholder="Contraseña">
+                              <i class="form1__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="form1__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                          </div>
+                    
+                          <div class="form1__mensaje" id="form1__mensaje">
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                          </div>
+                    
+                          <div class="form1__grupo form1__grupo-btn-enviar">
+                            <button type="submit" class="form1__btn">Enviar</button>
+                            <p class="form1__mensaje-exito" id="form1__mensaje-exito">Inicio de sesión exitoso exitoso!</p>
+                          </div>
+                    
+                        </form>
+                      </main>
+                    
+                      <script src="js/formulario.js"></script>
+                      <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="registro">
+        <!-- Button trigger modal -->
+        <button type="submit" class="btn btn-btn-light" data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">
+            <a href="#">Registrarse</a>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="exampleModal2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModal2Label">Inicio de sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <main>
+                        <form action="" class="formulario" id="formulario">
+                          <!-- Grupo: Usuario -->
+                          <div class="formulario__grupo" id="grupo__usuario">
+                            <label for="usuario" class="formulario__label">Usuario</label>
+                            <div class="formulario__grupo-input">
+                              <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Usuario">
+                              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+                          </div>
+                    
+                          <!-- Grupo: Nombre -->
+                          <div class="formulario__grupo" id="grupo__nombre">
+                            <label for="nombre" class="formulario__label">Nombre</label>
+                            <div class="formulario__grupo-input">
+                              <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre Apellido">
+                              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+                          </div>
+                    
+                          <!-- Grupo: Contraseña -->
+                          <div class="formulario__grupo" id="grupo__password">
+                            <label for="password" class="formulario__label">Contraseña</label>
+                            <div class="formulario__grupo-input">
+                              <input type="password" class="formulario__input" name="password" id="password" placeholder="Contraseña">
+                              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                          </div>
+                    
+                          <!-- Grupo: Contraseña 2 -->
+                          <div class="formulario__grupo" id="grupo__password2">
+                            <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                            <div class="formulario__grupo-input">
+                              <input type="password" class="formulario__input" name="password2" id="password2" placeholder="Contraseña">
+                              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                          </div>
+                    
+                          <!-- Grupo: Correo Electronico -->
+                          <div class="formulario__grupo" id="grupo__correo">
+                            <label for="correo" class="formulario__label">Correo Electrónico</label>
+                            <div class="formulario__grupo-input">
+                              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                          </div>
+                    
+                          <!-- Grupo: Teléfono -->
+                          <div class="formulario__grupo" id="grupo__telefono">
+                            <label for="telefono" class="formulario__label">Teléfono</label>
+                            <div class="formulario__grupo-input">
+                              <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="+56900000000">
+                              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El teléfono solo puede tener 12 dígitos, recuerda poner el signo “+” antes del número telefónico.</p> 
+                          </div>
+                    
+                          <!-- Grupo: Terminos y Condiciones -->
+                          <div class="formulario__grupo" id="grupo__terminos">
+                            <label class="formulario__label">
+                              <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                              Acepto los Terminos y Condiciones
+                            </label>
+                          </div>
+                    
+                          <div class="formulario__mensaje" id="formulario__mensaje">
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                          </div>
+                    
+                          <div class="formulario__grupo formulario__grupo-btn-enviar">
+                            <button type="submit" class="formulario__btn">Enviar</button>
+                            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Registro exitoso!</p>
+                          </div>
+                          
+                        </form>
+                      </main>
+                    
+                      <script src="formulario.js"></script>
+                      <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div id="carrito">
+        <!-- Button trigger modal -->
+        <button type="submit" class="btn btn-btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+          <a href="#"><img src="imagenes/carro.png" width="30px" alt=""></a>
+        </button>
+        <div id="modal-body">
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Carrito De Compras</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="carrito-modal-body">
+                  <div class="modal-body">
+                    <div class="contener">
+                      <table class="carrito">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID PRODUCTO</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">MARCA</th>
+                            <th scope="col">PRECIO</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-label="ID PRODUCTO">#30</td>
+                            <td data-label="NOMBRE">Correa de perro</td>
+                            <td data-label="MARCA">Ownat</td>
+                            <td data-label="PRECIO">$15.000</td>
+                            <td><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button></td>
+                          </tr>
+                          <tr>
+                            <td data-label="ID PRODUCTO">#54</td>
+                            <td data-label="NOMBRE">Identificador</td>
+                            <td data-label="MARCA">Acana</td>
+                            <td data-label="PRECIO">$2.500</td>
+                            <td><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button></td>
+                          </tr>
+                          <tr>
+                            <td data-label="ID PRODUCTO">#45</td>
+                            <td data-label="NOMBRE">Bandana</td>
+                            <td data-label="MARCA">petDafe</td>
+                            <td data-label="PRECIO">$3.000</td>
+                            <td><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button></td>
+                          </tr>
+                        </tr>
+                        <td data-label="ID PRODUCTO">ㅤ</td>
+                        <td data-label="NOMBRE">ㅤ</td>
+                        <td data-label="SUBTOTAL"><hp>SUBTOTAL</Hp></td>
+                        <td data-label="VALOR"><hp>$20.500</Hp></td>  
+                          <td data-label="DELETE">ㅤ</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <a class="btn btn-dark" href="pagar.html" role="button">Ir a Pagar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="logo2">
+    <img src="Imagenes/logo3.png" alt="">
+  </div>
+
+  <div id="nuestro">
+    <h1>NUESTROS PRODUCTOS</h1>
+  </div>
+
+  <div id="header4">
+
+    <div id="CRUDPROD">
+      <button type="submit" class="btn btn-btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdropv">
+        <a href="crud.producto.html">CRUD PRODUCTO</a>
+      </button>
+    </div>
+
+    <div id="Suscripción">
+      <button type="submit" class="btn btn-btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdropv">
+        <a href="crud.promociones.html">CRUD PROMOCIONES</a>
+      </button>
+    </div>
+  </div>
+
+  <div id="botonos">
+    
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#crearpdt">
+      Crear
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="crearpdt" tabindex="-1" aria-labelledby="crearpdtLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="crearpdtLabel">Crear</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <main>
+              <form action="" class="formpdt" id="formpdt">
+
+                <!-- Grupo: id -->
+                <div class="formpdt__grupo" id="grupo__idpdt">
+                  <label for="idpdt" class="formpdt__label">ID producto</label>
+                  <div class="formpdt__grupo-input">
+                    <input type="text" class="formpdt__input" name="idpdt" id="idpdt" placeholder="120">
+                    <i class="formpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formpdt__input-error">El ID de producto solo contendra de 1 dígito en adelante..</p>
+                </div>
+
+                <!-- Grupo: nombre -->
+                <div class="formpdt__grupo" id="grupo__nombrepdt">
+                  <label for="nombrepdt" class="formpdt__label">Nombre</label>
+                  <div class="formpdt__grupo-input">
+                    <input type="text" class="formpdt__input" name="nombrepdt" id="nombrepdt"
+                      placeholder="CORREA PERRO">
+                    <i class="formpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formpdt__input-error">El Nombre tiene que ser de 4 a 40 caracteres y solo puede contener
+                    numeros, letras y guion bajo.</p>
+                </div>
+
+                <!-- Grupo: marca -->
+                <div class="formpdt__grupo" id="grupo__marcapdt">
+                  <label for="marcapdt" class="formpdt__label">Marca</label>
+                  <div class="formpdt__grupo-input">
+                    <input type="text" class="formpdt__input" name="marcapdt" id="marcapdt" placeholder="BEAPHAR">
+                    <i class="formpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formpdt__input-error">El usuario tiene que ser de 3 a 40 caracteres y solo puede contener
+                    numeros, letras y guion bajo.</p>
+                </div>
+
+                <!-- Grupo: stock -->
+                <div class="formpdt__grupo" id="grupo__stockpdt">
+                  <label for="stockpdt" class="formpdt__label">Stock/Unidades</label>
+                  <div class="formpdt__grupo-input">
+                    <input type="text" class="formpdt__input" name="stockpdt" id="stockpdt" placeholder="120">
+                    <i class="formpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formpdt__input-error">El Stock de unidades solo contendra de 1 dígito en adelante..</p>
+                </div>
+
+                <!-- Grupo: precio-->
+                <div class="formpdt__grupo" id="grupo__preciopdt">
+                  <label for="preciopdt" class="formpdt__label">Precio</label>
+                  <div class="formpdt__grupo-input">
+                    <input type="text" class="formpdt__input" name="preciopdt" id="preciopdt" placeholder="$0000">
+                    <i class="formpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formpdt__input-error">El precio solo contendra de 1 dígito en adelante. No olvides poner el
+                    signo $ antes.</p>
+                </div>
+
+                <div class="formpdt__mensaje" id="formpdt__mensaje">
+                  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                    correctamente. </p>
+                </div>
+
+                <div class="formpdt__grupo formpdt__grupo-btn-enviar">
+                  <button type="submit" class="formpdt__btn">Crear</button>
+                  <p class="formpdt__mensaje-exito" id="formpdt__mensaje-exito">Producto añadido!</p>
+                </div>
+              </form>
+            </main>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="crud.producto.val/crud.crear.producto.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarpdt1">
+      Editar
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editarpdt1" tabindex="-1" aria-labelledby="editarpdt1Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editarpdt1Label">Editar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <main>
+              <form action="" class="editarpdt" id="editarpdt">
+
+                <!-- Grupo: id -->
+                <div class="editarpdt__grupo" id="grupo__idpdte">
+                  <label for="idpdt" class="editarpdt__label">ID producto</label>
+                  <div class="editarpdt__grupo-input">
+                    <input type="text" class="editarpdt__input" name="idpdte" id="idpdte" placeholder="120">
+                    <i class="editarpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="editarpdt__input-error">El ID de producto solo contendra de 1 dígito en adelante..</p>
+                </div>
+
+                <!-- Grupo: nombre -->
+                <div class="editarpdt__grupo" id="grupo__nombrepdte">
+                  <label for="nombrepdt" class="editarpdt__label">Nombre</label>
+                  <div class="editarpdt__grupo-input">
+                    <input type="text" class="editarpdt__input" name="nombrepdte" id="nombrepdte"
+                      placeholder="CORREA PERRO">
+                    <i class="editarpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="editarpdt__input-error">El Nombre tiene que ser de 4 a 40 caracteres y solo puede contener
+                    numeros, letras y guion bajo.</p>
+                </div>
+
+                <!-- Grupo: marca -->
+                <div class="editarpdt__grupo" id="grupo__marcapdte">
+                  <label for="marcapdt" class="editarpdt__label">Marca</label>
+                  <div class="editarpdt__grupo-input">
+                    <input type="text" class="editarpdt__input" name="marcapdte" id="marcapdte" placeholder="BEAPHAR">
+                    <i class="editarpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="editarpdt__input-error">El usuario tiene que ser de 3 a 40 caracteres y solo puede contener
+                    numeros, letras y guion bajo.</p>
+                </div>
+
+                <!-- Grupo: stock -->
+                <div class="editarpdt__grupo" id="grupo__stockpdte">
+                  <label for="stockpdt" class="editarpdt__label">Stock/Unidades</label>
+                  <div class="editarpdt__grupo-input">
+                    <input type="text" class="editarpdt__input" name="stockpdte" id="stockpdte" placeholder="120">
+                    <i class="editarpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="editarpdt__input-error">El Stock de unidades solo contendra de 1 dígito en adelante..</p>
+                </div>
+
+                <!-- Grupo: precio-->
+                <div class="editarpdt__grupo" id="grupo__preciopdte">
+                  <label for="preciopdt" class="editarpdt__label">Precio</label>
+                  <div class="editarpdt__grupo-input">
+                    <input type="text" class="editarpdt__input" name="preciopdte" id="preciopdte" placeholder="$0000">
+                    <i class="editarpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="editarpdt__input-error">El precio solo contendra de 1 dígito en adelante. No olvides poner
+                    el signo $ antes.</p>
+                </div>
+
+                <div class="editarpdt__mensaje" id="editarpdt__mensaje">
+                  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                    correctamente. </p>
+                </div>
+
+                <div class="editarpdt__grupo editarpdt__grupo-btn-enviar">
+                  <button type="submit" class="editarpdt__btn">Editar</button>
+                  <p class="editarpdt__mensaje-exito" id="editarpdt__mensaje-exito">Producto editado!</p>
+                </div>
+              </form>
+            </main>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="crud.producto.val/crud.editar.producto.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#borrar">
+      Borrar
+    </button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="borrar" tabindex="-1" aria-labelledby="borrarLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="borrarLabel">Borrar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <main>
+              <form action="" class="borrarpdt" id="borrarpdt">
+  
+                <!-- Grupo: id -->
+                <div class="borrarpdt__grupo" id="grupo__idpdtb">
+                  <label for="idpdtb" class="borrarpdt__label">ID producto</label>
+                  <div class="borrarpdt__grupo-input">
+                    <input type="text" class="borrarpdt__input" name="idpdtb" id="idpdtb" placeholder="120">
+                    <i class="borrarpdt__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="borrarpdt__input-error">El ID de producto solo contendra de 1 dígito en adelante, solo seran
+                    validos los numeros.</p>
+                </div>
+  
+                <div class="borrarpdt__mensaje" id="borrarpdt__mensaje">
+                  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                    correctamente. </p>
+                </div>
+  
+                <div class="borrarpdt__grupo borrarpdt__grupo-btn-enviar">
+                  <button type="submit" class="borrarpdt__btn">Borrar</button>
+                  <p class="borrarpdt__mensaje-exito" id="borrarpdt__mensaje-exito">Producto borrado exitosamente!</p>
+                </div>
+              </form>
+            </main>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="crud.producto.val/crud.borrar.prdt.js"></script>
+            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    
+  </div>
+    
+
+  <div id="header5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">NUMERO</th>
+          <th scope="col">ID PRODUCTO</th>
+          <th scope="col">NOMBRE PRODUCTO</th>
+          <th scope="col">MARCA</th>
+          <th scope="col">STOCK/UNIDADES</th>
+          <th scope="col">PRECIO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td data-label="ID PRODUCTO">#120</td>
+          <td data-label="NOMBRE PRODUCTO">Bandana con diseño</td>
+          <td data-label="MARCA">BEAPHAR</td>
+          <td data-label="STOCK/UNIDADES">12</td>
+          <td data-label="PRECIO">$5.000</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td data-label="ID PRODUCTO">#60</td>
+          <td data-label="NOMBRE PRODUCTO">Bandana multiples colores</td>
+          <td data-label="MARCA">ZEEDOG</td>
+          <td data-label="STOCK/UNIDADES">15</td>
+          <td data-label="PRECIO">$3.000</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td data-label="ID PRODUCTO">#50</td>
+          <td data-label="NOMBRE PRODUCTO">Identificadores de colores</td>
+          <td data-label="MARCA">RUFFWEAR</td>
+          <td data-label="STOCK/UNIDADES">50</td>
+          <td data-label="PRECIO">$2.000</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td data-label="ID PRODUCTO">#150</td>
+          <td data-label="NOMBRE PRODUCTO">Identificado más grabador</td>
+          <td data-label="MARCA">BEAPHAR</td>
+          <td data-label="STOCK/UNIDADES">16</td>
+          <td data-label="PRECIO">$10.000</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td data-label="ID PRODUCTO">#20</td>
+          <td data-label="NOMBRE PRODUCTO">Arnés para correa</td>
+          <td data-label="MARCA">ZEEDOG</td>
+          <td data-label="STOCK/UNIDADES">5</td>
+          <td data-label="PRECIO">$6.000</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td data-label="ID PRODUCTO">#10</td>
+          <td data-label="NOMBRE PRODUCTO">Correa retractil</td>
+          <td data-label="MARCA">RUFFWEAR</td>
+          <td data-label="STOCK/UNIDADES">5</td>
+          <td data-label="PRECIO">$5.000</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td data-label="ID PRODUCTO">#30</td>
+          <td data-label="NOMBRE PRODUCTO">Correa de perro</td>
+          <td data-label="MARCA">OWNAT</td>
+          <td data-label="STOCK/UNIDADES">3</td>
+          <td data-label="PRECIO">$15.000</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td data-label="ID PRODUCTO">#54</td>
+          <td data-label="NOMBRE PRODUCTO">Identificador</td>
+          <td data-label="MARCA">ACANA</td>
+          <td data-label="STOCK/UNIDADES">7</td>
+          <td data-label="PRECIO">$2.500</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td data-label="ID PRODUCTO">#45</td>
+          <td data-label="NOMBRE PRODUCTO">Bandana</td>
+          <td data-label="MARCA">PETDAFE</td>
+          <td data-label="STOCK/UNIDADES">10</td>
+          <td data-label="PRECIO">$3.000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <footer>
+    <div id="piepag">
+      <div id="centro">
+        <div class="container">
+          <h5> Centro de Ayuda</h5>
+          <a href="problemas.pedido.html"><span class="otherPage">Problemas con tu pedido</span></a>
+          <a href="mailto:pet.store@gmail.com"><span class="otherPage">pet.store@gmail.com</span></a>
+      </div>
+      </div>
+      <div id="Pet">
+        <div class="container">
+          <h5> Quienes Somos</h5>
+          <a href="nosotros.html"><span class="otherPage">Acerca de nosotros</span></a>
+      </div>
+      </div>
+      <div id="redess">
+        
+          <h5> Redes sociales</h5>
+          <a href="https://www.facebook.com/Pet-Store-111594554881435"><img src="Imagenes/facebook.png" alt="" a>
+          <a href="https://www.instagram.com/petstore640/"><img src="Imagenes/Instagram.png" alt="" a>
+          <a href="https://twitter.com/PETSTORE_1"><img src="Imagenes/twitter.png" alt="" a>
+      
+      </div>
+      
+
+      
+
+    </div>
+
+    <div id="copyr">
+     
+      <div id="cop"> 
+        <div class="container1">
+          <a>Copyright © 2022 Pet Storeㅤ|ㅤ</a> 
+          <a href="terminosycondiciones.html">Términos y Condicionesㅤ|ㅤ</a>
+          <a href="terminosycondiciones.html">Seguridad y Privacidad</a>
+      </div>
+      </div>
+      </div>
+      
+    
+  </footer>
+</body>
+
+</html>
